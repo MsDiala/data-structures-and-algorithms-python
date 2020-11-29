@@ -1,1 +1,1 @@
-![image](https://photos.google.com/share/AF1QipOlIo7W9QA_-vZpsKwexA3E6dhfPx-PAnYmCRZBipZeNxBPiHpoyxmPSknOHRdnJg?key=U3ZlRWYtWl9VSHBpaTNwZkxBYmN1clgtNURkRlJ3)
+![image](https://raw.githubusercontent.com/MsDiala/data-structures-and-algorithms-python/master/data_structures_and_algorithms/challenges/array_reverse/lab01.png)
