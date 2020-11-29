@@ -1,12 +1,8 @@
 def reverse_array(arr):
-    """Reverses a list
 
-    Args:
-        arr (list): python list
+      arr = arr[::-1]
 
-    Returns:
-        [list]: list in reversed form
-    """
-    # put your function implementation here
-    return arr
+      return arr
 
+
+  print(arr)
