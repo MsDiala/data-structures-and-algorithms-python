@@ -11,3 +11,4 @@ OUTPUT => 2
 ## Solution![Getting Started](ALGO3.png)
 
 
+https://github.com/MsDiala/data-structures-and-algorithms-python/pull/3 
