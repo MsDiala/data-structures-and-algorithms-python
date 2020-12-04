@@ -6,6 +6,6 @@ def test_empty():
     list = LinkedList()
     assert list.head == None
 
-
+ 
 
 
