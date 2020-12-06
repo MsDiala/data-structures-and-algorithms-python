@@ -30,4 +30,5 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Getting Started](IMG_20201207_011706.jpg./2/to/img.jpg)
+![Getting Started](IMG_20201207_011706.jpg)
+https://github.com/MsDiala/data-structures-and-algorithms-python/pull/6
