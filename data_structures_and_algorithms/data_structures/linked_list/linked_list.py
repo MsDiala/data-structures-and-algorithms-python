@@ -85,21 +85,33 @@ class LinkedList:
           return
         else:
           current = current.next
+
+
+    def length(self): 
+        current = self.head 
+        count = 0 
+        while (current): 
+            count += 1
+            current = current.next
+        return count 
+          
+
+    def nthFromEnd(self,n=0):
+        if type(n)!=int:
+            return'Exception'
+        if n>self.length() or n<0:
+            return'Exception'  
+        current= self.head
+        counter= 0
+        while current.next():
+            current= current.next
+            counter+=1
+            if counter>n:
+                current= current.next
+            return current.value                         
+        
    
     
-    def nthFromEnd(self, n=0):
-		if type(n) != int:
-			return 'Exception'
-		if n > self.length() or n < 0:
-			return 'Exception'
-		current = self.head
-		counter = 0
-		while current.next:
-			current = current.next
-			counter+=1
-			if counter > n:
-			current = current.next
-		return current.value
 
 
 
@@ -107,3 +119,23 @@ class LinkedList:
 
 
 
+
+   
+
+
+          
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+ll = LinkedList()
+ll.insert(node1)
+ll.insert(node2)
+ll.insert(node3)
+ll.insertBefore(node2,node4)
+ll.insertAfter(node3,node5)
+print(ll)
+
+   
+   

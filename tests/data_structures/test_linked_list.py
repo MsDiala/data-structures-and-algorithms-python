@@ -1,4 +1,5 @@
 from data_structures_and_algorithms.data_structures.linked_list.linked_list import  Node, LinkedList
+import pytest
 
 def test_list_creation():
   actual = LinkedList()
@@ -50,7 +51,7 @@ def test_insert_before():
   lst_five.append(2)
   lst_five.append(3)
   lst_five.append(5)
-  lst_five.insert_before(5, 4)
+  lst_five.insertBefore(5, 4)
 
   assert lst_five.head.next.next.value == 3
   assert lst_five.head.next.next.next.value == 4
@@ -63,42 +64,42 @@ def test_insert_after():
   lst_six.append(3)
   lst_six.append(4)
   lst_six.append(6)
-  lst_six.insert_after(4, 5)
+  lst_six.insertAfter(4, 5)
 
   assert lst_six.head.next.next.value == 3
   assert lst_six.head.next.next.next.value == 4
   assert lst_six.head.next.next.next.next.value == 5
   assert lst_six.head.next.next.next.next.next.value == 6
 
-  
-def test_kth_method():
-  lst_seven = LinkedList()
-  lst_seven.insert(1)
-  lst_seven.append(2)
-  lst_seven.append(3)
-  lst_seven.append(4)
-  lst_seven.append(5)
 
-def test_initialize_with_list():
-	initialList = LinkedList([5,6,7,8])
-	assert str(initialList) == '5 ->6 ->7 ->8'
 
 def test_nth_greater_than():
-	initialList = LinkedList([5,6,7,8])
-	assert initialList.nthFromEnd(8) == 'Exception'
-
-def test_nth_last():
-	initialList = LinkedList([5,6,7,8])
-	assert initialList.nthFromEnd(4) == 5
+ list = LinkedList()
+ list.append(1)
+ list.append(2)
+ list.append(3)
+ with pytest.raises(Exception):
+    assert list.nthFromEnd(8)
+# 	initialList = LinkedList([5,6,7,8])
+# 	assert initialList.nthFromEnd(4) == 5
 
 def test_nth_negative():
-	initialList = LinkedList([5,6,7,8])
-	assert initialList.nthFromEnd(-2) == 'Exception'
+    list = LinkedList()
+    list.append(1)
+    list.append(2)
+    list.append(3)
+    with pytest.raises(Exception):
+        assert list.nthFromEnd(-30)
+
 
 def test_nth_list_of_one():
-	initialList = LinkedList([5])
-	assert initialList.nthFromEnd(0) == 5
+    list = LinkedList()
+    list.append(1)
+    assert list.nthFromEnd(0) == 1
 
 def test_nth_average_use():
-	initialList = LinkedList([5,6,7,8,9,10,11])
-	assert initialList.nthFromEnd(3) == 8
+    list = LinkedList()
+    list.append(1)
+    list.append(2)
+    list.append(3)
+    assert list.nthFromEnd(1) == 2
