@@ -17,3 +17,4 @@ dequeue() which extracts a value from the PseudoQueue, using a first-in, first-o
 wnat to remove the content from the end
 add content to the begging
 
+https://github.com/MsDiala/data-structures-and-algorithms-python/pull/10
