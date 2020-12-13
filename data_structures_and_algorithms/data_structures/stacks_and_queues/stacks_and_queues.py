@@ -93,3 +93,4 @@ class Queue:
     def peek(self):
         '''returns the first value in a queue'''
         return self.front.value
+
