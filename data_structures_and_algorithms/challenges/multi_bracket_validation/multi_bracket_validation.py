@@ -9,9 +9,9 @@ def multi_bracket_validation(string):
     brackets = {'{': 0, '}': 0, '[': 0, ']': 0, '(': 0, ')': 0}
 
     for i in string:
-        for key in brackets.items():
+        for key,value in brackets.items():
             if i == key:
-                brackets[key] += 1
+                brackets[value] += 1
 
     if brackets['{'] - brackets['}'] == 0 and\
         brackets['['] - brackets[']'] == 0 and\
