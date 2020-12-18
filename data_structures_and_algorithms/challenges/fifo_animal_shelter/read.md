@@ -28,5 +28,4 @@ A class was defined for the shelter.  It contained methods for adding animals of
 
 
 
-https://github.com/MsDiala/data-structures-and-algorithms-python/pull/11
-
+https://github.com/MsDiala/data-structures-and-algorithms-python/pull/13
