@@ -6,7 +6,7 @@ class Node:
     def __repr__(self):
         return f'{self.value}'
 
-
+#//////////////////////////////////////////////////////
 class Stack:
 
     def __init__(self):
@@ -15,8 +15,11 @@ class Stack:
         self.bottom = None
         self.length = 0
     
+    
     def isEmpty(self):
         return self.top == None
+
+
 
     def push(self, value):
         '''adds new node to top of stack by pointing it to self.top'''
@@ -24,6 +27,8 @@ class Stack:
         node.next = self.top
         self.top = node
         self.length += 1
+
+
 
     def pop(self):
         '''Takes item from top of stack and returns it by reassigning the current top
@@ -38,6 +43,8 @@ class Stack:
         self.length -= 1
         return popped
 
+
+
     def peek(self):
         '''prints and returns the top of the stack'''
         if self.length <= 0:
@@ -46,7 +53,7 @@ class Stack:
         print(self.top.value)
         return self.top.value
 
-
+#/////////////////////////////////////////////////////////////////////////////
 class Queue:
 
     def __init__(self):
@@ -55,11 +62,16 @@ class Queue:
         self.rear = None
         self.length = 0
 
+
     def isEmpty(self):
         return self.front == None
 
+
+
     def enqueue(self, value):
         '''appends value to front of queue'''
+
+
 
         self.length += 1
         new_node = Node(value)
@@ -71,6 +83,8 @@ class Queue:
 
         self.rear.next = new_node
         self.rear = new_node
+
+
 
     def dequeue(self):
         '''removes value from front of queue, if length is zero it returns the queue
@@ -90,18 +104,22 @@ class Queue:
 
         return str(temp.value)
 
+
+
     def peek(self):
         '''returns the first value in a queue'''
         return self.front.value
 
-
+#////////////////////////////////////////////////////////////////////////////////////////////
+#Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 class AnimalShelter(Queue):
+    
   def __init__(self):
     self.front = None
     self.rear = None
     self.length = 0
 
-
+#enqueue(animal)
   def enqueue_dog_or_cat(self, animal): 
     if animal == 'Dog' or animal == 'Cat':
       print(f'Thanks for dropping off your {animal}')
@@ -109,6 +127,7 @@ class AnimalShelter(Queue):
       return 
     raise Exception('Invalid entry. Only Dogs and Cats allowed')
 
+#dequeue(pref)
   def dequeue_dog_or_cat(self, pref=None): 
 
     if pref == None:
