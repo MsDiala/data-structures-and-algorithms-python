@@ -1,15 +1,20 @@
-def selection_sort(list_a): 
-    indexing_length = range(0,len(list_a)-1)
-    
-    for i in indexing_length: 
-        min_value = i 
-        
-        for j in range(i+1,len(list_a)): 
-            if list_a[j] < list_a[min_value]: 
-                min_value = j 
-        if min_value != i: 
-            list_a[min_value] = list_a[i],      
-    return list_a 
-
-
-print(selection_sort([3,1,6,5,9,4,2,8]))
+def insertion_sort(arr):
+    # for each char in the array
+    if len(arr) < 1:
+        return "Not a valid input"
+    if len(arr) == 1:
+        return arr
+    for char in range(1, len(arr)):
+        # set check_char to 0
+        check_char = char - 1
+        # set temp to arr at 1
+        temp = arr[char]
+        # iterate through the array and check if temp is < arr[check]
+        while check_char >= 0 and temp < arr[check_char]:
+            # move a the check_char +1 to the check_char position
+            arr[check_char + 1] = arr[check_char]
+            # set check_char to check_char minus 1
+            check_char = check_char - 1
+        # set temp to the position after check_char
+        arr[check_char + 1] = temp
+    return arr
