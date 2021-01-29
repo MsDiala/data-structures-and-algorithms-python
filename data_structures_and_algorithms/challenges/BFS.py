@@ -29,35 +29,6 @@ def bfs(start, goal, dictionary):
     return solutions
 
 
-def closedDfs(start, goal, dictionary):
-    openNode = [(start,[start])]
-    closed = []
-    solutions = []
-
-    while openNode != []:
-
-        if openNode != []:
-            (node,path) = openNode.pop(0)
-
-        if node == goal:
-            solutions.append(path)
-
-        allChilds = dictionary[node]
-
-        if node not in closed:
-            closed.append(node)
-
-            testPath = []
-            selectedPath = []
-
-            for i in allChilds:
-                testPath = path + [i]
-                if len(testPath) == len(set(testPath)):
-                    selectedPath.append((i,testPath))
-
-            openNode = openNode + selectedPath
-
-    return solutions
 
 
 if __name__ == "__main__":
