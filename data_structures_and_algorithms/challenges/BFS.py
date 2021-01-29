@@ -1,14 +1,5 @@
 def bfs(start, goal, dictionary):
-    """
-    #######################################
-    #       Breadth-first Search BFS      #
-    #            Data Structure           #
-    #              Coded By.              #
-    #             Ashraf Amer             #
-    #            Jan,14 2020              #
-    #            AI workshop              #
-    #######################################
-    """
+
     
     openNode = [(start,[start])]
     closed = []
